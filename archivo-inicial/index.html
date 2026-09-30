@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conoce La California: nuestra cocina, nuestro menú y los lugares donde nos encontramos.">
+  <title>La California | Restaurante</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+  <header class="cabecera">
+    <div class="contenedor barra">
+      <a class="marca" href="#inicio" aria-label="La California, inicio">LA CALIFORNIA<span>COCINA · ENCUENTROS · BUENOS MOMENTOS</span></a>
+      <button class="boton-menu" type="button" aria-expanded="false" aria-controls="navegacion" hidden>Menú de navegación</button>
+      <nav id="navegacion" aria-label="Navegación principal">
+        <a href="#inicio" aria-current="location">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#menu">Menú</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#sucursales">Sucursales</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- Base de una sola página: cada sección se puede convertir en un HTML independiente. -->
+    <section id="inicio" class="portada seccion" aria-labelledby="titulo-inicio">
+      <div class="contenedor portada-grid">
+        <div>
+          <p class="etiqueta">BIENVENIDOS A LA CALIFORNIA</p>
+          <h1 id="titulo-inicio">Una buena mesa.<br>Mil historias.</h1>
+          <p class="introduccion">Sabores que se comparten, sobremesas que se alargan y un lugar al que siempre quieres volver.</p>
+          <div class="acciones">
+            <a class="boton" href="#menu">Explorar el menú <span aria-hidden="true">↗</span></a>
+            <a class="enlace" href="#sucursales">Encuentra tu sucursal</a>
+          </div>
+        </div>
+        <!-- Sustituye esta composición por una fotografía propia cuando esté disponible. -->
+        <div class="arte-portada" aria-hidden="true">
+          <span class="sello">HECHO PARA<br>COMPARTIR</span>
+          <div class="plato"><div class="comida"><i></i><i></i><i></i><i></i><i></i></div></div>
+          <span class="leyenda-arte">El gusto de estar juntos.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros" class="seccion" aria-labelledby="titulo-nosotros">
+      <div class="contenedor nosotros-grid">
+        <div><p class="etiqueta">01 / NOSOTROS</p><h2 id="titulo-nosotros">La casa de tus<br>buenos momentos.</h2></div>
+        <div class="texto-nosotros">
+          <p>Creemos que una comida es mucho más que lo que llega al plato. Es la compañía, la conversación y ese pequeño momento que se convierte en un gran recuerdo.</p>
+          <p>Este es el espacio para contar nuestra historia: cómo comenzamos, qué inspira nuestra cocina y quiénes hacen posible cada experiencia.</p>
+          <span class="nota">Contenido de ejemplo · Personaliza la historia de tu restaurante.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="seccion fondo-suave" aria-labelledby="titulo-menu">
+      <div class="contenedor">
+        <div class="encabezado-seccion"><div><p class="etiqueta">02 / MENÚ</p><h2 id="titulo-menu">Antojos para cada ocasión.</h2></div><p>Una muestra para empezar.<br>Platillos y precios de ejemplo en MXN.</p></div>
+        <div class="filtros" role="group" aria-label="Filtrar platillos" hidden>
+          <button type="button" data-filtro="todos" aria-pressed="true">Todo</button>
+          <button type="button" data-filtro="entradas" aria-pressed="false">Entradas</button>
+          <button type="button" data-filtro="fuertes" aria-pressed="false">Platos fuertes</button>
+          <button type="button" data-filtro="postres" aria-pressed="false">Postres</button>
+        </div>
+        <div class="platillos">
+          <article class="tarjeta-platillo" data-categoria="entradas"><span class="numero">01</span><p class="etiqueta">PARA ABRIR EL APETITO</p><h3>Ensalada de la casa</h3><p>Mezcla de hojas frescas, vegetales de temporada y vinagreta de la casa.</p><span class="precio">$120 <small>MXN</small></span></article>
+          <article class="tarjeta-platillo" data-categoria="fuertes"><span class="numero">02</span><p class="etiqueta">EL PLATO PRINCIPAL</p><h3>Pollo a las hierbas</h3><p>Pollo a la plancha con hierbas aromáticas, papas y vegetales asados.</p><span class="precio">$220 <small>MXN</small></span></article>
+          <article class="tarjeta-platillo" data-categoria="postres"><span class="numero">03</span><p class="etiqueta">UN FINAL DULCE</p><h3>Pastel de chocolate</h3><p>Una rebanada de pastel de chocolate acompañada de helado de vainilla.</p><span class="precio">$95 <small>MXN</small></span></article>
+        </div>
+        <p id="resultado-filtro" class="solo-lectores" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section id="contacto" class="seccion contacto" aria-labelledby="titulo-contacto">
+      <div class="contenedor contacto-grid">
+        <div><p class="etiqueta">03 / CONTACTO</p><h2 id="titulo-contacto">La conversación<br>empieza aquí.</h2><p>¿Una ocasión especial o una pregunta?<br>Nos encantará saber de ti.</p></div>
+        <div class="datos-contacto">
+          <!-- Reemplaza estos textos con datos reales y agrega enlaces tel: y mailto:. -->
+          <div><h3>Llámanos</h3><p>Teléfono por confirmar</p></div>
+          <div><h3>Escríbenos</h3><p>Correo por confirmar</p></div>
+          <div><h3>Visítanos</h3><a class="enlace" href="#sucursales">Consultar sucursales <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sucursales" class="seccion" aria-labelledby="titulo-sucursales">
+      <div class="contenedor">
+        <p class="etiqueta">04 / SUCURSALES</p><h2 id="titulo-sucursales">Tu próxima mesa está aquí.</h2>
+        <div class="sucursales-grid">
+          <!-- Duplica este artículo para agregar más sucursales. -->
+          <article class="tarjeta-sucursal"><span class="etiqueta">LA CALIFORNIA</span><h3>Sucursal principal</h3><address>Dirección pendiente de agregar<br>Ciudad y código postal</address><p><strong>Horario</strong><br>Días y horarios por confirmar</p><span class="nota">Agrega aquí el enlace al mapa de tu sucursal.</span></article>
+          <div class="invitacion"><span aria-hidden="true">✳</span><p>Ven por el sabor.<br>Quédate por el momento.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="pie"><div class="contenedor"><a class="marca" href="#inicio">LA CALIFORNIA</a><p>© <span id="anio">2026</span> La California. Todos los derechos reservados.</p><a href="#inicio">Volver arriba ↑</a></div></footer>
+</body>
+</html>

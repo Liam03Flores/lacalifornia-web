@@ -1,0 +1,30 @@
+[
+  {
+    "pair": "oscuro/papel",
+    "ratio": 11.65
+  },
+  {
+    "pair": "oscuro/verde",
+    "ratio": 6.59
+  },
+  {
+    "pair": "oscuro/amarillo",
+    "ratio": 9.4
+  },
+  {
+    "pair": "muted/suave",
+    "ratio": 5.64
+  },
+  {
+    "pair": "enlace-oscuro/papel",
+    "ratio": 9.18
+  },
+  {
+    "pair": "enlace-oscuro/crema",
+    "ratio": 8.63
+  },
+  {
+    "pair": "papel/oscuro",
+    "ratio": 11.65
+  }
+]

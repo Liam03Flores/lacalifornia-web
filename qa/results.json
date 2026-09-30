@@ -1,0 +1,576 @@
+{
+  "matrix": [
+    {
+      "theme": "retro",
+      "width": 320,
+      "route": "/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 320,
+      "route": "/nosotros/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 320,
+      "route": "/menu/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 320,
+      "route": "/sucursales/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 320,
+      "route": "/contacto/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 320,
+      "route": "/404.html",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 375,
+      "route": "/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 375,
+      "route": "/nosotros/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 375,
+      "route": "/menu/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 375,
+      "route": "/sucursales/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 375,
+      "route": "/contacto/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 375,
+      "route": "/404.html",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 768,
+      "route": "/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 768,
+      "route": "/nosotros/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 768,
+      "route": "/menu/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 768,
+      "route": "/sucursales/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 768,
+      "route": "/contacto/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 768,
+      "route": "/404.html",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 1024,
+      "route": "/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 1024,
+      "route": "/nosotros/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 1024,
+      "route": "/menu/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 1024,
+      "route": "/sucursales/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 1024,
+      "route": "/contacto/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 1024,
+      "route": "/404.html",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 1440,
+      "route": "/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 1440,
+      "route": "/nosotros/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 1440,
+      "route": "/menu/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 1440,
+      "route": "/sucursales/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 1440,
+      "route": "/contacto/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "retro",
+      "width": 1440,
+      "route": "/404.html",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 320,
+      "route": "/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 320,
+      "route": "/nosotros/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 320,
+      "route": "/menu/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 320,
+      "route": "/sucursales/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 320,
+      "route": "/contacto/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 320,
+      "route": "/404.html",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 375,
+      "route": "/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 375,
+      "route": "/nosotros/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 375,
+      "route": "/menu/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 375,
+      "route": "/sucursales/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 375,
+      "route": "/contacto/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 375,
+      "route": "/404.html",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 768,
+      "route": "/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 768,
+      "route": "/nosotros/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 768,
+      "route": "/menu/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 768,
+      "route": "/sucursales/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 768,
+      "route": "/contacto/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 768,
+      "route": "/404.html",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 1024,
+      "route": "/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 1024,
+      "route": "/nosotros/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 1024,
+      "route": "/menu/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 1024,
+      "route": "/sucursales/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 1024,
+      "route": "/contacto/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 1024,
+      "route": "/404.html",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 1440,
+      "route": "/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 1440,
+      "route": "/nosotros/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 1440,
+      "route": "/menu/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 1440,
+      "route": "/sucursales/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 1440,
+      "route": "/contacto/",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    },
+    {
+      "theme": "modern",
+      "width": 1440,
+      "route": "/404.html",
+      "overflow": false,
+      "h1": 1,
+      "brokenImages": 0
+    }
+  ],
+  "checks": {
+    "links": {
+      "count": 18,
+      "bad": []
+    },
+    "keyboardOpen": true,
+    "firstLinkFocused": true,
+    "escape": true,
+    "persist": true,
+    "nojs": [
+      {
+        "route": "/",
+        "nav": true,
+        "overflow": false,
+        "theme": "/css/theme-retro.css"
+      },
+      {
+        "route": "/nosotros/",
+        "nav": true,
+        "overflow": false,
+        "theme": "/css/theme-retro.css"
+      },
+      {
+        "route": "/menu/",
+        "nav": true,
+        "overflow": false,
+        "theme": "/css/theme-retro.css"
+      },
+      {
+        "route": "/sucursales/",
+        "nav": true,
+        "overflow": false,
+        "theme": "/css/theme-retro.css"
+      },
+      {
+        "route": "/contacto/",
+        "nav": true,
+        "overflow": false,
+        "theme": "/css/theme-retro.css"
+      }
+    ],
+    "reducedMotion": "0px (corregido y verificado en ambos temas)",
+    "text200": [
+      {
+        "theme": "retro",
+        "overflow": false
+      },
+      {
+        "theme": "modern",
+        "overflow": false
+      }
+    ],
+    "longTextOverflow": false,
+    "status404": 404
+  },
+  "extended": {
+    "noJS": {
+      "count": 60,
+      "failures": []
+    },
+    "storageBlocked": true,
+    "cssFailure": {
+      "href": "/css/theme-retro.css",
+      "message": "No se pudo cargar el tema. Se conserva la vista anterior."
+    },
+    "zoom": [
+      {
+        "theme": "retro",
+        "overflow": false
+      },
+      {
+        "theme": "modern",
+        "overflow": false
+      }
+    ],
+    "motion": [
+      {
+        "theme": "retro",
+        "value": "0px"
+      },
+      {
+        "theme": "modern",
+        "value": "0px"
+      }
+    ],
+    "headers": [],
+    "sharedMarkup": {
+      "header": true,
+      "footer": true
+    }
+  },
+  "jsErrors": []
+}

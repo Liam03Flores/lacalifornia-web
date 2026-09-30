@@ -1,0 +1,4 @@
+/* Única fuente de colores. Los temas asignan roles semánticos. */
+:root{--verde:#a7cc8e;--naranja:#e86e2e;--amarillo:#ffe566;--oscuro:#263c30;--crema:#faf6e9;--papel:#fffdf7;--suave:#eee8d7;--muted:#525d50;--linea:#929b89;--blanco:#ffffff;--enlace-oscuro:#74341b;
+--font-body:'Montserrat',Arial,Helvetica,sans-serif;--font-title:'Josefin Sans','Trebuchet MS',sans-serif;--font-display:Georgia,'Times New Roman',serif;
+--ancho:1240px;--duracion:140ms;--movimiento:2px;}
