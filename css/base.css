@@ -331,6 +331,12 @@ select {
   min-width: 0;
 }
 
+.hero-media .image-frame img {
+  padding: clamp(12px, 2vw, 24px);
+  object-fit: contain;
+  object-position: center;
+}
+
 .mascot {
   display: flex;
   align-items: center;
@@ -593,6 +599,11 @@ dd {
 .menu-photo img {
   aspect-ratio: 16/9;
   object-fit: cover;
+}
+
+.product .image-frame img,
+.menu-photo .image-frame img {
+  object-fit: contain;
 }
 
 .promo {
