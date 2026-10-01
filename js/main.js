@@ -3,31 +3,62 @@
   const toggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('#navegacion');
   const mobile = matchMedia('(max-width: 41.99rem)');
-  // Navegación de divulgación, no modal: Tab conserva el orden natural de lectura.
-  // Sin JS, el botón permanece oculto y todos los enlaces están disponibles.
+  const navPosition = document.createComment('Posición de la navegación de escritorio');
+  nav.before(navPosition);
+  const navDialog = document.createElement('dialog');
+  navDialog.className = 'nav-dialog';
+  navDialog.setAttribute('aria-label', 'Secciones');
+  const closeButton = document.createElement('button');
+  closeButton.type = 'button';
+  closeButton.className = 'nav-dialog-close';
+  closeButton.setAttribute('aria-label', 'Cerrar menú');
+  closeButton.textContent = '×';
+  navDialog.append(closeButton);
+  document.body.append(navDialog);
+  // Sin JavaScript, la navegación permanece visible en la cabecera.
   function closeNav(returnFocus = false) {
-    if (returnFocus) toggle.focus();
+    if (navDialog.open) navDialog.close();
+    document.body.classList.remove('nav-open');
     toggle.setAttribute('aria-expanded', 'false');
     nav.hidden = mobile.matches;
+    if (returnFocus) toggle.focus();
   }
   function adaptNav() {
     const focusInside = nav.contains(document.activeElement);
     const focusOnToggle = document.activeElement === toggle;
     toggle.hidden = !mobile.matches;
-    if (mobile.matches) closeNav(focusInside);
-    else { nav.hidden = false; toggle.setAttribute('aria-expanded', 'false'); if (focusOnToggle) nav.querySelector('a').focus(); }
+    closeNav(false);
+    if (mobile.matches) {
+      navDialog.append(nav);
+      if (focusInside) toggle.focus();
+    } else {
+      navPosition.after(nav);
+      if (focusOnToggle || focusInside || document.activeElement === closeButton) nav.querySelector('a').focus();
+    }
   }
   toggle.addEventListener('click', () => {
     const open = toggle.getAttribute('aria-expanded') !== 'true';
+    if (!open) { closeNav(true); return; }
     toggle.setAttribute('aria-expanded', String(open));
-    nav.hidden = !open;
+    nav.hidden = false;
+    document.body.classList.add('nav-open');
+    navDialog.showModal();
+    nav.querySelector('a').focus();
+  });
+  closeButton.addEventListener('click', () => closeNav(true));
+  navDialog.addEventListener('cancel', event => {
+    event.preventDefault();
+    closeNav(true);
   });
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && mobile.matches && !nav.hidden) closeNav(true);
   });
   document.addEventListener('click', event => {
-    if (mobile.matches && !nav.hidden && !nav.contains(event.target) && !toggle.contains(event.target)) {
-      closeNav(nav.contains(document.activeElement));
+    if (mobile.matches && navDialog.open && event.target === navDialog) {
+      const bounds = navDialog.getBoundingClientRect();
+      const outside = event.clientX < bounds.left || event.clientX > bounds.right ||
+        event.clientY < bounds.top || event.clientY > bounds.bottom;
+      if (outside) closeNav(true);
     }
   });
   nav.addEventListener('click', event => {
@@ -35,7 +66,30 @@
   });
   if (mobile.addEventListener) mobile.addEventListener('change', adaptNav);
   else mobile.addListener(adaptNav);
+  window.addEventListener('resize', () => {
+    if (mobile.matches !== (nav.parentElement === navDialog)) adaptNav();
+  });
   adaptNav();
+
+  const header = document.querySelector('.cabecera');
+  if (header) {
+    let previousScroll = Math.max(0, window.scrollY);
+    function updateHeader() {
+      const currentScroll = Math.max(0, window.scrollY);
+      const distance = currentScroll - previousScroll;
+      const menuOpen = toggle.getAttribute('aria-expanded') === 'true';
+      const keyboardFocus = header.querySelector(':focus-visible');
+      if (currentScroll <= header.offsetHeight || menuOpen || keyboardFocus) {
+        header.classList.remove('is-hidden');
+        previousScroll = currentScroll;
+      } else if (Math.abs(distance) >= 6) {
+        header.classList.toggle('is-hidden', distance > 0);
+        previousScroll = currentScroll;
+      }
+    }
+    window.addEventListener('scroll', updateHeader, { passive: true });
+    header.addEventListener('focusin', () => header.classList.remove('is-hidden'));
+  }
 
   const selector = document.querySelector('#tema');
   const sheet = document.querySelector('#theme');

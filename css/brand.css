@@ -1,16 +1,21 @@
 /* Única fuente de colores. Los temas asignan roles semánticos. */
 :root {
-  --verde: #a7cc8e;
-  --naranja: #e86e2e;
-  --amarillo: #ffe566;
-  --oscuro: #263c30;
-  --crema: #faf6e9;
+  --california-yellow: #F4DC66;
+  --california-red: #AC2519;
+  --california-green: #4B9051;
+
+  --verde: var(--california-green);
+  --rojo: var(--california-red);
+  --naranja: var(--california-red);
+  --amarillo: var(--california-yellow);
+  --oscuro: #101b12;
+  --crema: #F5F1DE;
   --papel: #fffdf7;
-  --suave: #eee8d7;
+  --suave: #e1ead7;
   --muted: #525d50;
   --linea: #929b89;
   --blanco: #ffffff;
-  --enlace-oscuro: #74341b;
+  --enlace-oscuro: var(--california-red);
 
   --font-body: 'Montserrat', Arial, Helvetica, sans-serif;
   --font-title: 'Josefin Sans', 'Trebuchet MS', sans-serif;

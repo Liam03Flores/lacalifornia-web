@@ -38,8 +38,13 @@ h2 {
 }
 
 h1 {
+  color: var(--california-red);
   font-size: clamp(2.65rem, 6vw, 5.1rem);
   letter-spacing: -.045em;
+}
+
+.accent {
+  color: var(--california-green);
 }
 
 h2 {
@@ -59,7 +64,7 @@ a {
 }
 
 a:hover {
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: 3px;
 }
 
 button,
@@ -155,16 +160,34 @@ select {
 }
 
 .cabecera {
+  --header-height: clamp(52px, 30.5vw - 49px, 64px);
+  --header-logo-height: calc(var(--header-height) * .9);
+  --header-control-height: max(44px, calc(var(--header-logo-height) * .8));
+  position: sticky;
+  top: 0;
+  z-index: 100;
   border-bottom: var(--borde);
-  background: var(--superficie);
+  background: var(--california-yellow);
+  transition: transform var(--duracion) ease;
+}
+
+.cabecera.is-hidden {
+  transform: translateY(-100%);
+}
+
+.cabecera:focus-within {
+  transform: translateY(0);
 }
 
 .barra {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto var(--header-control-height);
   align-items: center;
-  gap: 1rem;
-  padding-block: 1rem;
+  column-gap: 8px;
+  row-gap: 0;
+  min-height: var(--header-height);
+  padding-block: calc(var(--header-height) * .05);
+  width: min(var(--ancho), calc(100% - 24px));
 }
 
 .marca {
@@ -176,6 +199,23 @@ select {
   font-weight: 700;
   font-size: 1.65rem;
   letter-spacing: -.06em;
+}
+
+.cabecera .marca {
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  height: var(--header-logo-height);
+  min-width: 0;
+  margin: 0;
+}
+
+.cabecera .marca img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left center;
 }
 
 .marca small {
@@ -197,7 +237,7 @@ select {
 
 .nav a {
   padding: .6rem .25rem;
-  font-size: .88rem;
+  font-size: 1.4rem;
   min-height: 44px;
 }
 
@@ -236,10 +276,111 @@ select {
 .nav-toggle {
   background: var(--superficie);
   color: var(--texto);
+  grid-column: 3;
+  grid-row: 1;
+  width: var(--header-control-height);
+  height: var(--header-control-height);
+  min-height: 44px;
+  padding: .5rem;
+  font-size: 0;
+  line-height: 0;
+  gap: 0;
+}
+
+.nav-toggle::before {
+  content: '';
+  display: block;
+  flex: none;
+  width: 22px;
+  height: 2px;
+  background: currentColor;
+  box-shadow: 0 -7px 0 currentColor, 0 7px 0 currentColor;
+}
+
+.nav-toggle > span {
+  display: none;
+}
+
+.cabecera .nav {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  max-height: 70dvh;
+  overflow-y: auto;
+}
+
+/* Menú móvil: panel centrado, compacto y sin marcos interiores. */
+.nav-open {
+  overflow: hidden;
+}
+
+.nav-dialog {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: min(280px, calc(100% - 40px));
+  max-height: calc(100dvh - 48px);
+  padding: .5rem;
+  border: var(--borde);
+  border-radius: var(--radio);
+  background: var(--superficie);
+  color: var(--texto);
+  box-shadow: 0 12px 36px #0003;
+  overflow-y: auto;
+}
+
+.nav-dialog::backdrop {
+  background: #0006;
+}
+
+.nav-dialog-close {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 1.6rem;
+}
+
+.nav-dialog .nav[aria-label] {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.nav-dialog .nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 44px;
+  padding: .3rem 44px;
+  text-align: center;
 }
 
 .header-cta {
-  margin-left: auto;
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+  height: var(--header-control-height);
+  min-height: 44px;
+  gap: .25rem;
+  padding: 0 .45rem;
+  font-size: .75rem;
+  white-space: nowrap;
 }
 
 .demo {
@@ -272,7 +413,14 @@ select {
 }
 
 .hero-copy {
+  container-type: inline-size;
+  min-width: 0;
   padding-block: 1rem;
+}
+
+.hero-copy h1 {
+  font-size: min(4rem, 11cqi);
+  white-space: nowrap;
 }
 
 .hero-copy h1 em {
@@ -703,6 +851,46 @@ dd {
 }
 
 @media (min-width: 42rem) {
+  .cabecera {
+    --header-height: 72px;
+    --header-logo-height: 56px;
+    --header-control-height: 56px;
+  }
+
+  .barra {
+    grid-template-columns: 204px minmax(0, 1fr) auto;
+    gap: clamp(.3rem, 1.2vw, 1rem);
+    padding-block: 8px;
+  }
+
+  .cabecera .nav {
+    grid-column: 2;
+    grid-row: 1;
+    width: auto;
+    min-width: 0;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    gap: .15rem;
+    height: calc(var(--header-logo-height) * .8);
+    overflow: visible;
+  }
+
+  .cabecera .nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1rem;
+    padding-inline: .1rem;
+    white-space: nowrap;
+  }
+
+  .header-cta {
+    grid-column: 3;
+    font-size: .889rem;
+    padding-inline: .65rem;
+  }
+
   .pilares .contenedor {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -777,26 +965,6 @@ dd {
   .contact-grid {
     grid-template-columns: 1.3fr 1fr;
     align-items: start;
-  }
-}
-
-/* La navegación mantiene su propia fila hasta 1200 px para no comprimir controles. */
-@media (min-width: 75rem) {
-  .nav {
-    width: auto;
-    margin-inline: auto;
-  }
-
-  .barra {
-    gap: 1.5rem;
-  }
-
-  .header-cta {
-    order: 3;
-  }
-
-  .nav {
-    order: 2;
   }
 }
 

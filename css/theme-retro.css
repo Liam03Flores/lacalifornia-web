@@ -6,8 +6,8 @@
   --enlace: var(--enlace-oscuro);
   --borde-color: var(--oscuro);
   --borde: 2px solid var(--borde-color);
-  --boton-fondo: var(--amarillo);
-  --boton-texto: var(--oscuro);
+  --boton-fondo: var(--california-red);
+  --boton-texto: var(--california-yellow);
   --rotulo: var(--verde);
   --identidad: var(--verde);
   --acento-suave: var(--suave);
@@ -24,7 +24,7 @@
 
 .hero-copy h1 em {
   display: inline-block;
-  border-bottom: 5px solid var(--naranja);
+  border-bottom: 5px solid var(--california-green);
 }
 
 .window {
