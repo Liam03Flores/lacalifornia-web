@@ -130,10 +130,6 @@
 }
 
 @media (min-width: 60rem) {
-  .hero-grid {
-    grid-template-columns: 1fr 1.2fr;
-  }
-
   .hero-media .image-frame img {
     aspect-ratio: 1;
   }

@@ -412,6 +412,26 @@ select {
   align-items: center;
 }
 
+.page-sucursales .seccion .split > .image-frame {
+  padding-inline: clamp(12px, 2vw, 24px);
+  min-width: 0;
+}
+
+.page-sucursales .seccion .split > .image-frame img {
+  object-fit: contain;
+}
+
+@media (max-width: 41.99rem) {
+  .page-sucursales .seccion .split > .product-body {
+    order: -1;
+  }
+
+  .page-sucursales .seccion .split > .image-frame {
+    order: 1;
+    padding-bottom: 1rem;
+  }
+}
+
 .hero-copy {
   container-type: inline-size;
   min-width: 0;
@@ -428,10 +448,29 @@ select {
   font-style: italic;
 }
 
-.hero-mascot {
-  width: 100px;
-  max-width: 100%;
-  margin: 0 0 .5rem;
+.hero-scene {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: 640px;
+  min-width: 0;
+  margin-inline: auto;
+  padding-left: clamp(58px, 18%, 100px);
+}
+
+.hero-scene .hero-media {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-scene .hero-mascot {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: clamp(88px, 28%, 150px);
+  margin: 0;
+  transform: translateY(-50%) rotate(-8deg);
+  pointer-events: none;
 }
 
 .hero-mascot img {
@@ -441,26 +480,22 @@ select {
 }
 
 @media (max-width: 41.99rem) {
-  .hero-heading {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) clamp(56px, 18vw, 80px);
-    align-items: center;
-    gap: .5rem;
-    margin-bottom: 1rem;
+  .hero-scene {
+    --mascot-width: clamp(110px, 30vw, 150px);
+    max-width: none;
+    padding-left: 0;
+    padding-top: calc(var(--mascot-width) * .62);
   }
 
-  .hero-heading h1 {
-    grid-column: 1;
-    grid-row: 1;
-    font-size: min(2.4rem, 8cqi);
-    margin: 0;
+  .hero-scene .hero-mascot {
+    top: 0;
+    left: 50%;
+    width: var(--mascot-width);
+    transform: translateX(-50%);
   }
 
-  .hero-heading .hero-mascot {
-    grid-column: 2;
-    grid-row: 1;
+  .hero-scene .hero-media {
     width: 100%;
-    margin: 0;
   }
 }
 
@@ -493,6 +528,20 @@ select {
 
 .bar-title span:last-child {
   letter-spacing: 0;
+}
+
+.hero-announcement > span:first-child {
+  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  line-height: 1.25;
+  letter-spacing: .04em;
+}
+
+.bar-title .window-icons {
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+  flex-shrink: 0;
+  font-size: .8rem;
 }
 
 .image-frame {
@@ -1001,9 +1050,17 @@ dd {
 }
 
 @media (min-width: 60rem) {
+  .social-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .hero-grid {
-    grid-template-columns: 1.05fr 1fr;
+    grid-template-columns: minmax(0, 1fr) 55%;
     gap: 3rem;
+  }
+
+  .hero-scene {
+    max-width: none;
   }
 
   .products {

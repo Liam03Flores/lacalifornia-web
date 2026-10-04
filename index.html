@@ -20,6 +20,7 @@
     }
   </script>
   <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -41,38 +42,39 @@
     </div>
   </header>
 
-  <div class="contenedor demo" hidden>
+  <!-- <div class="contenedor demo" hidden>
     <label for="tema">Vista de demostración</label>
     <select id="tema">
       <option value="retro">Retro</option>
       <option value="modern">Moderno</option>
     </select>
     <span id="theme-status" role="status"></span>
-  </div>
+  </div> -->
 
   <main id="contenido" tabindex="-1">
     <section class="hero">
       <div class="contenedor hero-grid">
         <div class="hero-copy">
           <div class="hero-heading">
-            <figure class="hero-mascot">
-              <!-- Reemplaza el src por la imagen definitiva de la mascota. -->
-              <!-- <img src="images/mascota/carlitos sentado (2).png" alt="Espacio para la mascota de La California" width="800" height="600"> -->
-            </figure>
             <h1>Los buenos sabores<br><em>se quedan.</em></h1>
           </div>
-          <p class="intro">Restaurante y paletería. Más de nueve décadas de tradición mexicana, en el corazón de Puebla.</p>
+          <p class="intro">Restaurante y paletería. Más de nueve décadas de tradición mexicana, en el corazón de todos los Poblanos.</p>
           <div class="acciones">
             <a class="boton" href="menu/index.html">Ver nuestro menú <span aria-hidden="true">↗</span></a>
             <a href="sucursales/index.html">Encuéntranos</a>
           </div>
           <p class="caption">Calle 3 Norte · Centro Histórico · Desde 1935</p>
         </div>
-        <div class="hero-media window">
-          <p class="bar-title"><span> Renovamos nuestra imagen!</span><span aria-hidden="true">— □ ×</span></p>
-          <figure class="image-frame">
-            <img src="images/local/shop-photo.jpg" alt="foto local" width="800" height="600" fetchpriority="high">
+        <div class="hero-scene">
+          <figure class="hero-mascot">
+            <img src="images/mascota/carlitos sentado (2).png" alt="Carlitos, la mascota de La California, asomándose junto a la ventana" width="1975" height="1634">
           </figure>
+          <div class="hero-media window">
+            <p class="bar-title hero-announcement"><span> Renovamos nuestra imagen!</span><span class="window-icons" aria-hidden="true"><i class="fa fa-window-minimize"></i><i class="fa fa-window-maximize"></i><i class="fa fa-times"></i></span></p>
+            <figure class="image-frame">
+              <img src="images/local/shop-photo.jpg" alt="animacion cambio de logo" width="800" height="600" fetchpriority="high">
+            </figure>
+          </div>
         </div>
       </div>
     </section>
@@ -89,7 +91,7 @@
       <div class="contenedor">
         <div class="section-head">
           <div>
-            <p class="eyebrow">Los de siempre</p>
+            <!-- <p class="eyebrow">Los de siempre</p> -->
             <h2>Un antojo, una tradición.</h2>
           </div>
           <a href="menu/">Ver el menú completo ↗</a>
@@ -103,7 +105,7 @@
               <p class="eyebrow">01 / SABOR DE LA CALIFORNIA</p>
               <h3>Chabela</h3>
               <p>Torta con carne al pastor.</p>
-              <p class="pending">Exclusividad de la Chabela: pendiente de confirmar.</p>
+              <p>Exclusivo de la 3 Nte.</p>
               <!-- <a href="menu/#chabelas">Consultar en el menú ↗</a> -->
             </div>
           </article>
@@ -155,10 +157,34 @@
       </div>
     </section>
 
+    <section class="seccion">
+      <div class="contenedor">
+        <!-- <p class="eyebrow">Un poquito de nuestra vida diaria</p> -->
+        <h2>Más de Carlitos en nuestras redes.</h2>
+        <div class="two-col social-grid">
+          <article class="social-placeholder" data-social="instagram">
+            <h3>Instagram</h3>
+            <p>[PLACEHOLDER — Publicación oficial autorizada]</p>
+            <p class="caption">Cuenta y enlace pendientes. No se cargan recursos externos.</p>
+          </article>
+          <article class="social-placeholder" data-social="facebook">
+            <h3>Facebook</h3>
+            <p>[PLACEHOLDER — Publicación oficial autorizada]</p>
+            <p class="caption">Cuenta y enlace pendientes. No se cargan recursos externos.</p>
+          </article>
+          <article class="social-placeholder" data-social="tiktok">
+            <h3>TikTok</h3>
+            <p>[PLACEHOLDER — Publicación oficial autorizada]</p>
+            <p class="caption">Cuenta y enlace pendientes. No se cargan recursos externos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="seccion location">
       <div class="contenedor split">
         <figure class="image-frame">
-          <img src="./images/local/shop-photo.jpg" alt="" width="800" height="600" loading="lazy">
+          <img src="./images/local/cleaned-maps.jpg" alt="" width="800" height="600" loading="lazy">
         </figure>
         <div>
           <p class="eyebrow">Nos vemos en la 3 Norte</p>
@@ -178,11 +204,10 @@
       <div class="contenedor">
         <div class="section-head">
           <div>
-            <p class="eyebrow">Historias alrededor de la mesa</p>
+            <p class="eyebrow">Todos aquellos que aman nuestro sabor y calidad</p>
             <h2>Nuestros clientes.</h2>
           </div>
         </div>
-        <p class="muted">Espacio reservado para testimonios autorizados.</p>
         <div class="testimonials">
           <div class="testimonial">
             <p>[PLACEHOLDER — Testimonio de cliente 1]</p>
